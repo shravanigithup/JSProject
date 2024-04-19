@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .quiz {
+    margin-bottom: 40px;
+  }
+  .question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .options {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  .feedback {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="quiz">
+    <h2 class="question">Question 1: What is the capital of France?</h2>
+    <div class="options">
+      <input type="radio" name="q1" value="a"> <label for="q1a">a) Paris</label><br>
+      <input type="radio" name="q1" value="b"> <label for="q1b">b) London</label><br>
+      <input type="radio" name="q1" value="c"> <label for="q1c">c) Rome</label><br>
+    </div>
+    <button onclick="checkAnswer('q1')">Submit</button>
+    <p class="feedback" id="feedback_q1"></p>
+  </div>
+
+  <div class="quiz">
+    <h2 class="question">Question 2: What is the largest planet in our solar system?</h2>
+    <div class="options">
+      <input type="radio" name="q2" value="a"> <label for="q2a">a) Jupiter</label><br>
+      <input type="radio" name="q2" value="b"> <label for="q2b">b) Saturn</label><br>
+      <input type="radio" name="q2" value="c"> <label for="q2c">c) Earth</label><br>
+    </div>
+    <button onclick="checkAnswer('q2')">Submit</button>
+    <p class="feedback" id="feedback_q2"></p>
+  </div>
+
+  <div class="quiz">
+    <h2 class="question">Question 3: What is the currency of Japan?</h2>
+    <div class="options">
+      <input type="radio" name="q3" value="a"> <label for="q3a">a) Yen</label><br>
+      <input type="radio" name="q3" value="b"> <label for="q3b">b) Euro</label><br>
+      <input type="radio" name="q3" value="c"> <label for="q3c">c) Dollar</label><br>
+    </div>
+    <button onclick="checkAnswer('q3')">Submit</button>
+    <p class="feedback" id="feedback_q3"></p>
+  </div>
+
+  <div class="quiz">
+    <h2 class="question">Question 4: What is the largest ocen in the world?</h2>
+    <div class="options">
+       <input type="radio" name="q4" value="a"> <label for="q4a">a) Atlantic Ocean</label><br>
+       <input type="radio" name="q4" value="a"> <label for="q4b">a) Pacific Ocean </label><br>
+       <input type="radio" name="q4" value="a"> <label for="q4c">a) Indian Ocean</label><br>
+     </div>
+     <button onclick="checkAnswer('q4')">Submit</button>
+     <p class="feedback" id="feedback_q4"></p>
+  </div>
+
+  <div class="quiz">                                                               
+    <h2 class="question">Question 5: In what year was the first iphone wsa released?</h2>
+    <div class="options">                                                                   
+      <input type="radio" name="q5" value="a"> <label for="q5a">a) 2005 </label><br>
+      <input type="radio" name="q5" value="b"> <label for="q5b">b) 2007</label><br>
+      <input type="radio" name="q5" value="c"> <label for="q5c">c) 2008</label><br>
+    </div>
+    <button onclick="checkAnswer('q5')">Submit</button>
+    <p class="feedback" id="feedback_q5"></p>
+  <div>
+
+  <div class="quiz">
+    <h2 class="question">Question 6: Who discoverd electricity?</h2>
+    <div class="options">
+      <input type="radio" name="q6" value="a"> <label for="q6a">a) Benjamin Franklin</label><br>
+      <input type="radio" name="q6" value="b"> <label for="q6b">b) Isaac Newton</label><br>
+      <input type="radio" name="q6" value="c"> <label for="q6c">c) Michael Faraday</label><br>
+    </div>
+    <button onclick="checkAnswer('q6')">Submit</button>
+    <p class="feedback" id="feedback_q6"></p>
+  </div>  
+
+  <div class="quiz">
+    <h2 class="question">Question 7: In what year was the United Nations founded?</h2>
+    <div class="options">
+       <input type="radio" name="q7" value="a"> <label for="q7a">a) 1920</label><br>
+       <input type="radio" name="q7" value="b"> <label for="q7b">b) 1945</label><br>
+       <input type="radio" name="q7" value="c"> <label for="q7c">c) 1950</label><br>
+     </div>
+     <button onclick="checkAnswer('q7')">Submit</button>
+     <p class="feedback" id="feedback_q7"></p>
+  </div>
+
+  <div class="quiz">
+    <h2 class="question">Question 8: Who is the CEO of Tesla?</h2>
+    <div class="options">
+       <input type="radio" name="q8" value="a"> <label for="q8a">a) Elon Musk</label><br>
+       <input type="radio" name="q8" value="c"> <label for="q8b">b) Tim Cook</label><br>
+       <input type="radio" name="q8" value="a"> <label for="q8c">c) Jeff Bezos</label><br>
+    </div>
+    <button onclick="checkAnswer('q8')">Submit</button>
+    <p class="feedback" id="feedback_q8"></p>
+  </div>
+
+  <div class="quiz">
+    <h2 class="question">Question 9: What is the currency of Japan?</h2>
+    <div class="options">
+      <input type="radio" name="q9" value="c"> <label for="q9a">a) Yen</label><br>
+      <input type="radio" name="q9" value="c"> <label for="q9b">b) Euro</label><br>
+      <input type="radio" name="q9" value="c"> <label for="q9c">c) Dollar</label><br>
+     </div>
+     <button onclick="checkAnswer('q9')">Submit</button>
+     <p class="feedback" id="feedback_q9"></p>
+  </div>
+
+  <div class="quiz">
+    <h2 class="question">Quuestion 10: Who painted the Mona Lisa?</h2>
+    <div class="options">
+      <input type="radio" name="q10" value="a"> <label for="q10a">a) Leonardo da Vincc</label><br>
+      <input type="radio" name="q10" value="b"> <label for="q10b">b) Michelangelo</label><br>
+      <input type="radio" name="q10" value="c"> <label for="q10c">c) Pablo Picasso</label><br>
+    </div>
+    <button onclick="checkAnswer('q10')">Submit</button>
+    <p class="feedback" id="feedback_q10"></p>
+  </div>
+
+<script>
+  function checkAnswer(question) {
+    var userAnswer = document.querySelector('input[name="' + question + '"]:checked');
+    if (userAnswer) {
+      var feedback = document.getElementById("feedback_" + question);
+      if (userAnswer.value === "a") {
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "Incorrect. The correct answer is Paris.";
+        feedback.style.color = "red";
+      }
+    } else {
+      alert("Please select an option.");
+    }
+  }
+</script>
+</body>
+</html>
+
+  
